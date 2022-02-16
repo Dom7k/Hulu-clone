@@ -1,9 +1,17 @@
 import React from 'react'
+import Thumbnail from './Thumbnail'
 
-function Main({ requests }) {
+function Main({ results }) {
+  
   return (
-    <div>Main</div>
+    <div>
+      {results.map(( result ) => (
+        <Thumbnail key={result.id} result={result} />
+      ))}
+    </div>
+    
   )
+  
 }
 
-export default Main
+export default Main;

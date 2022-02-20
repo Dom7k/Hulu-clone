@@ -6,6 +6,8 @@ import Nav from '../components/Nav'
 import requests from '../utils/requests'
 
 export default function Home( results ) {
+  
+  let data = results.results;
 
   return (
     <div >
@@ -17,7 +19,7 @@ export default function Home( results ) {
 
     <Header />
     <Nav />
-    <Main results={results} />
+    <Main results={data} />
     </div>
   )
 }
